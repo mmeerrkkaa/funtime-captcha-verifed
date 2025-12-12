@@ -1,0 +1,32 @@
+const path = require('path');
+const { PLUGIN_OWNER_ID, MESSAGES } = require('./constants');
+
+async function onLoad(bot, options) {
+    const log = bot.sendLog;
+    const settings = options.settings || {};
+    const pluginDir = __dirname;
+
+    try {
+
+        if (settings.enabled) {
+            const captcha = setupCaptchaHandler(bot, settings, pluginDir);
+
+            if (!captcha) {
+                log('&c[FunTimeCaptcha] Не удалось инициализировать');
+            }
+        }
+
+    } catch (error) {
+        log(`&c[FunTimeCaptcha] Ошибка загрузки: ${error.message}`);
+        // Пробрасываем ошибки модулей для автоустановки
+        if (error.message && error.message.includes('Cannot find module')) {
+            throw error;
+        }
+    }
+}
+
+async function onUnload({ botId, prisma }) {
+    console.log(`[FunTimeCaptcha] Выгрузка плагина для бота ID: ${botId}`);
+}
+
+module.exports = { onLoad, onUnload };
