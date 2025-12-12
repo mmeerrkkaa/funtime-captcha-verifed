@@ -1,5 +1,6 @@
 const path = require('path');
 const { PLUGIN_OWNER_ID, MESSAGES } = require('./constants');
+const { setupCaptchaHandler } = require('./lib/captchaHandler');
 
 async function onLoad(bot, options) {
     const log = bot.sendLog;

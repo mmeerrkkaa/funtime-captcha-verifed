@@ -1,6 +1,6 @@
 {
   "name": "funtime-captcha-verifed",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Плагин для автоматического решения капч на сервере FunTime",
   "main": "index.js",
   "author": "merka",
@@ -9,23 +9,24 @@
     "axios": "^1.6.0"
   },
   "botpanel": {
+    "displayName": "FunTime Авто прохождение капчи",
     "icon": "Camera",
     "supportedHosts": [
       "mc.funtime.su",
       "play.funtime.su"
     ],
     "settings": {
-      "enabled": {
-        "type": "boolean",
-        "label": "Включить автосохранение капчи",
-        "description": "Автоматически сохранять изображения капчи при обнаружении",
-        "default": false
-      },
       "autoSolve": {
         "type": "boolean",
         "label": "Автоматически решать капчу",
-        "description": "Автоматически решать капчу",
+        "description": "Распознавать и автоматически проходить капчу через YOLO API",
         "default": true
+      },
+      "enabled": {
+        "type": "boolean",
+        "label": "Сохранять изображения капчи",
+        "description": "Сохранять изображения капчи в папку images/ (опционально, для автопрохождения не обязательно)",
+        "default": false
       },
       "ApiUrl": {
         "type": "string",
