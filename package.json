@@ -1,0 +1,44 @@
+{
+  "name": "funtime-captcha-verifed",
+  "version": "1.0.0",
+  "description": "Плагин для автоматического решения капч на сервере FunTime",
+  "main": "index.js",
+  "author": "merka",
+  "dependencies": {
+    "flayercaptcha": "^1.0.6",
+    "axios": "^1.6.0"
+  },
+  "botpanel": {
+    "icon": "Camera",
+    "supportedHosts": [
+      "mc.funtime.su",
+      "play.funtime.su"
+    ],
+    "settings": {
+      "enabled": {
+        "type": "boolean",
+        "label": "Включить автосохранение капчи",
+        "description": "Автоматически сохранять изображения капчи при обнаружении",
+        "default": false
+      },
+      "autoSolve": {
+        "type": "boolean",
+        "label": "Автоматически решать капчу",
+        "description": "Автоматически решать капчу",
+        "default": true
+      },
+      "ApiUrl": {
+        "type": "string",
+        "label": "URL API",
+        "description": "Специальный адрес. если он умрёт, то капчи всё",
+        "default": "http://212.22.70.39:5000/recognize"
+      },
+      "yoloApiTimeout": {
+        "type": "number",
+        "label": "Таймаут API (мс)",
+        "description": "Максимальное время ожидания ответа от API в миллисекундах",
+        "default": 10000
+      }
+    }
+  }
+}
