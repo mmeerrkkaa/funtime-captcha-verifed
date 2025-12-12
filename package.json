@@ -40,5 +40,15 @@
         "default": 10000
       }
     }
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmeerrkkaa/funtime-captcha-verifed"
+  },
+  "keywords": [
+    "blockmine",
+    "blockmine-plugin",
+    "minecraft",
+    "mineflayer"
+  ]
 }
