@@ -9,7 +9,7 @@ async function onLoad(bot, options) {
 
     try {
 
-        if (settings.enabled) {
+        if (settings.saveImages || settings.autoSolve) {
             const captcha = setupCaptchaHandler(bot, settings, pluginDir);
 
             if (!captcha) {
