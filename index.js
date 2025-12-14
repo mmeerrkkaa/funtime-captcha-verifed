@@ -13,13 +13,12 @@ async function onLoad(bot, options) {
             const captcha = setupCaptchaHandler(bot, settings, pluginDir);
 
             if (!captcha) {
-                log('&c[FunTimeCaptcha] Не удалось инициализировать');
+                log('[FunTimeCaptcha] Не удалось инициализировать');
             }
         }
 
     } catch (error) {
-        log(`&c[FunTimeCaptcha] Ошибка загрузки: ${error.message}`);
-        // Пробрасываем ошибки модулей для автоустановки
+        log(`[FunTimeCaptcha] Ошибка загрузки: ${error.message}`);
         if (error.message && error.message.includes('Cannot find module')) {
             throw error;
         }

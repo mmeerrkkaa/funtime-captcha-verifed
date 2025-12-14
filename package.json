@@ -1,6 +1,6 @@
 {
   "name": "funtime-captcha-verifed",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Плагин для автоматического решения капч на сервере FunTime",
   "main": "index.js",
   "author": "merka",
