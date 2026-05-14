@@ -32,7 +32,7 @@
         "type": "string",
         "label": "URL API",
         "description": "Специальный адрес. если он умрёт, то капчи всё",
-        "default": "http://212.22.70.39:5000/recognize"
+        "default": "http://2.26.99.50:5000/recognize"
       },
       "yoloApiTimeout": {
         "type": "number",
